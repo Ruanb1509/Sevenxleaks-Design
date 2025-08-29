@@ -336,8 +336,8 @@ const AsianPage: React.FC = () => {
                               }
                             }}
                           >
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-4 flex-1">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                              <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
                                 {/* Indicador (inclui western em laranja) */}
                                 {link.contentType && (
                                   <div
@@ -352,9 +352,9 @@ const AsianPage: React.FC = () => {
                                 )}
 
                                 <h3
-                                  className={`text-lg font-bold text-white transition-colors duration-300 font-orbitron relative group-hover:${
+                                  className={`text-sm sm:text-lg font-bold text-white transition-colors duration-300 font-orbitron relative group-hover:${
                                     (link.contentType || 'western') === 'western' ? 'text-purple-300' : 'text-purple-300'
-                                  }`}
+                                  } truncate`}
                                 >
                                   {link.name}
                                   <div
@@ -367,7 +367,7 @@ const AsianPage: React.FC = () => {
                                 </h3>
 
                                 <div
-                                  className={`h-px flex-1 max-w-20 transition-all duration-300 ${
+                                  className={`hidden sm:block h-px flex-1 max-w-20 transition-all duration-300 ${
                                     (link.contentType || 'western') === 'western'
                                       ? 'bg-gradient-to-r from-purple-500/50 to-transparent group-hover:from-purple-400/70'
                                       : 'bg-gradient-to-r from-purple-500/50 to-transparent group-hover:from-purple-400/70'
@@ -375,14 +375,14 @@ const AsianPage: React.FC = () => {
                                 ></div>
                               </div>
 
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                                 {recentLinks.includes(link) && (
-                                  <span className={`inline-flex items-center px-4 py-2 text-white text-xs font-bold rounded-full shadow-lg animate-pulse border font-roboto ${
+                                  <span className={`inline-flex items-center px-2 sm:px-4 py-1 sm:py-2 text-white text-xs font-bold rounded-full shadow-lg animate-pulse border font-roboto ${
                                     (link.contentType || 'western') === 'western'
                                       ? 'bg-gradient-to-r from-purple-500 to-purple-600 border-purple-400/30'
                                       : 'bg-gradient-to-r from-purple-500 to-purple-600 border-purple-400/30'
                                   }`}>
-                                    <i className="fa-solid fa-star mr-1 text-xs"></i>
+                                    <i className="fa-solid fa-star mr-1 text-xs hidden sm:inline"></i>
                                     NEW
                                   </span>
                                 )}
@@ -390,7 +390,7 @@ const AsianPage: React.FC = () => {
                                 {/* Badge do tipo de conteúdo (inclui western em laranja) */}
                                 {link.contentType && (
                                   <span
-                                    className={`inline-flex items-center px-3 py-1 text-xs font-bold rounded-full ${
+                                    className={`inline-flex items-center px-2 sm:px-3 py-1 text-xs font-bold rounded-full ${
                                       link.contentType === 'asian'
                                         ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
                                         : link.contentType === 'banned'
@@ -408,8 +408,8 @@ const AsianPage: React.FC = () => {
                                   </span>
                                 )}
 
-                                <span className="inline-flex items-center px-4 py-2 bg-gray-700/70 text-gray-300 text-sm font-medium rounded-full border border-gray-600/50 backdrop-blur-sm font-roboto">
-                                  <i className="fa-solid fa-tag mr-2 text-xs"></i>
+                                <span className="inline-flex items-center px-2 sm:px-4 py-1 sm:py-2 bg-gray-700/70 text-gray-300 text-xs sm:text-sm font-medium rounded-full border border-gray-600/50 backdrop-blur-sm font-roboto">
+                                  <i className="fa-solid fa-tag mr-1 sm:mr-2 text-xs"></i>
                                   {link.category}
                                 </span>
                               </div>

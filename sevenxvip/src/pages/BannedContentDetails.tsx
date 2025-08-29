@@ -219,9 +219,10 @@ const BannedContentDetails = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-red-400 to-red-500 rounded-xl flex items-center justify-center shadow-xl">
                 <AlertTriangle className="w-5 h-5 text-white" />
               </div>
-              <div className="flex items-center gap-2 px-3 py-1 bg-red-500/20 text-red-300 rounded-full border border-red-500/30 backdrop-blur-sm">
+              <div className="flex items-center gap-2 px-2 sm:px-3 py-1 bg-red-500/20 text-red-300 rounded-full border border-red-500/30 backdrop-blur-sm">
                 <Shield className="w-3 h-3" />
-                <span className="font-bold text-xs">BANNED CONTENT</span>
+                <span className="font-bold text-xs hidden sm:inline">BANNED CONTENT</span>
+                <span className="font-bold text-xs sm:hidden">BANNED</span>
               </div>
             </div>
 
@@ -234,12 +235,12 @@ const BannedContentDetails = () => {
               {content.name}
             </motion.h1>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="flex items-center gap-2 px-3 py-1.5 bg-gray-700/50 rounded-lg border border-gray-600/50 backdrop-blur-sm"
+                className="flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-700/50 rounded-lg border border-gray-600/50 backdrop-blur-sm"
               >
                 <Calendar className="w-4 h-4 text-red-400" />
                 <span className="text-gray-300 text-xs sm:text-sm">
@@ -251,7 +252,7 @@ const BannedContentDetails = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="flex items-center gap-2 px-3 py-1.5 bg-red-500/20 text-red-300 rounded-lg border border-red-500/30 backdrop-blur-sm"
+                className="flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-red-500/20 text-red-300 rounded-lg border border-red-500/30 backdrop-blur-sm"
               >
                 <Tag className="w-4 h-4" />
                 <span className="font-medium text-xs sm:text-sm">{content.category}</span>

@@ -95,7 +95,7 @@ const DownloadOptions: React.FC<DownloadOptionsProps> = ({ primaryLinks }) => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {availableOptions.map((option, index) => (
           <motion.div
             key={option.name}

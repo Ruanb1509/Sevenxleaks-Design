@@ -288,8 +288,8 @@ const UnknownContent: React.FC = () => {
                               }
                             }}
                           >
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-4 flex-1">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                              <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
                                 {link.contentType && link.contentType !== 'unknown' && (
                                   <div className={`w-2 h-2 rounded-full ${
                                     link.contentType === 'asian' ? 'bg-purple-400' :
@@ -299,16 +299,16 @@ const UnknownContent: React.FC = () => {
                                   }`}></div>
                                 )}
                                 <HelpCircle className={`w-5 h-5 ${minimalistTheme.accent}`} />
-                                <h3 className={`text-lg font-bold text-white group-${minimalistTheme.accentHover} transition-colors duration-300 font-orbitron relative`}>
+                                <h3 className={`text-sm sm:text-lg font-bold text-white group-${minimalistTheme.accentHover} transition-colors duration-300 font-orbitron relative truncate`}>
                                   {link.name}
                                   <div className="absolute -bottom-1 left-0 w-16 h-0.5 bg-gradient-to-r from-slate-500 to-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </h3>
-                                <div className="h-px bg-gradient-to-r from-slate-500/50 to-transparent flex-1 max-w-20 group-hover:from-slate-400/70 transition-all duration-300"></div>
+                                <div className="hidden sm:block h-px bg-gradient-to-r from-slate-500/50 to-transparent flex-1 max-w-20 group-hover:from-slate-400/70 transition-all duration-300"></div>
                               </div>
-                              <div className="flex items-center gap-3">
+                              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                                 {recentLinks.includes(link) && (
-                                  <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white text-xs font-bold rounded-full shadow-lg animate-pulse border border-slate-400/30 font-roboto">
-                                    <i className="fa-solid fa-star mr-1 text-xs"></i>
+                                  <span className="inline-flex items-center px-2 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white text-xs font-bold rounded-full shadow-lg animate-pulse border border-slate-400/30 font-roboto">
+                                    <i className="fa-solid fa-star mr-1 text-xs hidden sm:inline"></i>
                                     NEW
                                   </span>
                                 )}
@@ -322,8 +322,8 @@ const UnknownContent: React.FC = () => {
                                     {link.contentType.toUpperCase()}
                                   </span>
                                 )}
-                                <span className="inline-flex items-center px-4 py-2 bg-gray-700/70 text-gray-300 text-sm font-medium rounded-full border border-gray-600/50 backdrop-blur-sm font-roboto">
-                                  <i className="fa-solid fa-tag mr-2 text-xs"></i>
+                                <span className="inline-flex items-center px-2 sm:px-4 py-1 sm:py-2 bg-gray-700/70 text-gray-300 text-xs sm:text-sm font-medium rounded-full border border-gray-600/50 backdrop-blur-sm font-roboto">
+                                  <i className="fa-solid fa-tag mr-1 sm:mr-2 text-xs"></i>
                                   {link.category}
                                 </span>
                               </div>

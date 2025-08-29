@@ -219,9 +219,10 @@ const asianContentDetails = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center shadow-xl">
                 <AlertTriangle className="w-5 h-5 text-white" />
               </div>
-              <div className="flex items-center gap-2 px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30 backdrop-blur-sm">
+              <div className="flex items-center gap-2 px-2 sm:px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30 backdrop-blur-sm">
                 <Shield className="w-3 h-3" />
-                <span className="font-bold text-xs">ASIAN CONTENT</span>
+                <span className="font-bold text-xs hidden sm:inline">ASIAN CONTENT</span>
+                <span className="font-bold text-xs sm:hidden">ASIAN</span>
               </div>
             </div>
 
@@ -229,17 +230,17 @@ const asianContentDetails = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-2xl sm:text-3xl font-bold text-white mb-4"
+              className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight"
             >
               {content.name}
             </motion.h1>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="flex items-center gap-2 px-3 py-1.5 bg-gray-700/50 rounded-lg border border-gray-600/50 backdrop-blur-sm"
+                className="flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-700/50 rounded-lg border border-gray-600/50 backdrop-blur-sm"
               >
                 <Calendar className="w-4 h-4 text-purple-400" />
                 <span className="text-gray-300 text-sm">
@@ -251,7 +252,7 @@ const asianContentDetails = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="flex items-center gap-2 px-3 py-1.5 bg-purple-500/20 text-purple-300 rounded-lg border border-purple-500/30 backdrop-blur-sm"
+                className="flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-purple-500/20 text-purple-300 rounded-lg border border-purple-500/30 backdrop-blur-sm"
               >
                 <Tag className="w-4 h-4" />
                 <span className="font-medium text-sm">{content.category}</span>
